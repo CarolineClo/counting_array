@@ -5,12 +5,12 @@ result = Array.from(counter);
 count();
 
 function count() {
-  result.unshift(counter++ + 1);
-  result.slice(0, 9);
+  result.unshift(counter);
   setTimeout(() => {
     count();
   }, 500);
-  console.log(result);
+  console.log(result.slice(0, 9));
+  counter++;
 }
 
 //push= add something at the end
